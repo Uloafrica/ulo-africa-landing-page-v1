@@ -5,7 +5,7 @@ export const heroContent: HeroContent = {
   description:
     'Experience Africa like you belong, stay in soulful homes and explore with trusted locals who help you live, not just visit.',
   videoUrl:
-    'https://res.cloudinary.com/dfcsaxtru/video/upload/v1753103839/COMPRESSED_V2_fnuozs.mp4'
+    'https://res.cloudinary.com/dfcsaxtru/video/upload/q_65/v1753103839/COMPRESSED_V2_fnuozs.mp4'
 }
 
 export const businessSlides: BusinessSlide[] = [
