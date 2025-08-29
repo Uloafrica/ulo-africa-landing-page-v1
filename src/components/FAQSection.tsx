@@ -17,7 +17,8 @@ const defaultFAQs: FAQItem[] = [
       'Ulô starts in Nigeria and will grow to four more African countries soon. You can enjoy top cities now, with more choices coming your way.'
   },
   {
-    question: 'How long do profile changes take to appear?',
+    question:
+      'Does the Ulô training program provide a professional certification?',
     answer:
       'Yes. After training, you’ll earn a global certificate that shows you’re trusted in guest care and culture. It also opens more work chances with Ulô and beyond.'
   },
@@ -43,7 +44,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFAQs }) => {
   }
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#f9fafb] ">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50/30 to-[#f9fafb]">
       {/* Background blur gradient accent */}
 
       <div className="relative max-w-4xl mx-auto">

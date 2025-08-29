@@ -150,7 +150,7 @@ const Header: React.FC<HeaderProps> = ({ howToJoinSectionRef }) => {
           <div
             style={{
               backgroundColor: `rgba(0, 0, 18, 0.1)`,
-              boxShadow: `0 25px 50px -12px rgba(6, 3, 9, 0.2)`
+              boxShadow: ``
             }}
             className="rounded-3xl backdrop-blur-xl transition-all duration-300 py-[6px] px-[54px]"
           >

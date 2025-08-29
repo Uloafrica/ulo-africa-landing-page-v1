@@ -151,8 +151,7 @@ const HowToJoinSection = forwardRef<HowToJoinSectionRef>((props, ref) => {
                 <p className="text-gray-700 leading-relaxed">
                   Step into the world of hospitality as an Ulô Certified
                   Associate. Build global guest connections, represent Ulô
-                  professionally, work remotely, and earn up to $20,000
-                  annually.
+                  professionally, work remotely, and earn a substantial income.
                 </p>
               </div>
               <button
