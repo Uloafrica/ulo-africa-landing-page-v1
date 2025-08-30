@@ -76,15 +76,15 @@ const Index = () => {
 
         <VideoContentSection
           title1="Ulô Associates"
-          subtitle1="Join a network of trusted professionals who bring Africa closer to the world. As an Associate, you’re more than support staff — you are the face of hospitality, guiding guests, managing stays, and curating experiences that leave lasting memories."
+          subtitle1="Your personal city companion. Managing your stay, guiding your steps, and making every moment smoother."
           video1="https://res.cloudinary.com/dfcsaxtru/video/upload/q_70/v1756200085/INTRO_TOUR_cycmao.mp4"
           title2="Feel the city, not the stress"
           subtitle2="With Ulô Associates, guests are welcomed like family, guided through culture and hidden gems, and supported every step for a truly effortless stay."
           video2="https://res.cloudinary.com/dfcsaxtru/video/upload/q_70/v1756200069/GUEST_TOUR_FULL_oc7fdk.mp4"
           listItems={[
-            'Gain world-class training and certification',
-            'Earn a substantial, flexible income',
-            'Work remotely while managing stays'
+            ' Welcome you at check-in and ensure comfort',
+            ' Connect you with culture, tours, and insider experiences',
+            ' ⁠Handle safety, logistics, and local support'
           ]}
           sectionId="associates-section"
         />
@@ -99,7 +99,7 @@ const Index = () => {
 
         <VideoContentSection
           title1="Guest Handbook"
-          subtitle1="Your passport to belonging. This city companion has everything you need to explore African cities with confidence, from key phrases and etiquette to safe spots and hidden secrets."
+          subtitle1="Your passport to belonging. This city companion has everything you need to explore African cities with confidence, from key phrases to etiquette and safe spots."
           video1="https://res.cloudinary.com/dfcsaxtru/video/upload/v1756208494/INTRO_HANDBOOK_1_et6nsp.mp4"
           listItems={[
             'Navigate easily',

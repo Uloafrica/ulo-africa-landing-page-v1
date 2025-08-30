@@ -7,9 +7,9 @@ const CTASection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const certifiedListItems = [
-    'Gain world-class training and certification',
-    'Earn up to $20,000 per year',
-    'Work remotely while managing stays'
+    ' Gain world-class training and certification',
+    ' ⁠Earn a substantial, flexible income',
+    ' ⁠Work remotely while managing stays'
   ]
 
   const handleApplyClick = () => {

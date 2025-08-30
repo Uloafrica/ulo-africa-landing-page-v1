@@ -40,7 +40,7 @@ const ScrollDotsSection: React.FC = () => {
 
 
   const videoURL =
-    'https://res.cloudinary.com/dfcsaxtru/video/upload/v1756383990/CONNECTING_YOU_V2_qrhts3.mp4'
+    'https://res.cloudinary.com/dfcsaxtru/video/upload/v1756394424/CONNECTING_YOU_v9kp2u.mp4'
 
   return (
     <div className="py-20">
