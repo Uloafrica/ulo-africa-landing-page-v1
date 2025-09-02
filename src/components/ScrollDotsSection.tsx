@@ -2,12 +2,17 @@ import React, { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Plane, Home, User } from 'lucide-react'
+import { useMobileVideoPlayback } from '../hooks/useMobileVideoPlayback'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const ScrollDotsSection: React.FC = () => {
   const scrollDotsRef = useRef<HTMLDivElement>(null)
   const blueDotRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Use the mobile video playback hook
+  useMobileVideoPlayback(videoRef)
 
   useEffect(() => {
     if (scrollDotsRef.current && blueDotRef.current) {
@@ -38,18 +43,22 @@ const ScrollDotsSection: React.FC = () => {
     }
   }, [])
 
-
   const videoURL =
     'https://res.cloudinary.com/dfcsaxtru/video/upload/v1756394424/CONNECTING_YOU_v9kp2u.mp4'
 
   return (
-    <div className="py-20">
-      <div className="ml-14">
+    <div className="py-10 md:py-20">
+      <div className="ml-12 md:ml-14">
         <video
-          className="h-[90px] object-fill mb-3 mx-auto"
+          ref={videoRef}
+          className="w-[500px] h-[95px] md:h-[90px] object-fill mb-0md:mb-3 mx-auto"
           muted
           loop={true}
           autoPlay={true}
+          playsInline={true}
+          preload="metadata"
+          controls={false}
+          webkit-playsinline="true"
         >
           <source src={videoURL} type="video/mp4" />
           Your browser does not support the video tag.

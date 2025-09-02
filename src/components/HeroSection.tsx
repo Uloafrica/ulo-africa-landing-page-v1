@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { HeroContent } from '@/types'
 import BlurText from '@/components/BlurText'
+import { useMobileVideoPlayback } from '../hooks/useMobileVideoPlayback'
 
 interface HeroSectionProps {
   heroContent: HeroContent
@@ -21,43 +22,8 @@ const handleScrollToVideo = () => {
 const HeroSection: React.FC<HeroSectionProps> = ({ heroContent }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Handle video playback for mobile devices
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    // Function to attempt video playback
-    const attemptPlay = async () => {
-      try {
-        await video.play()
-      } catch (error) {
-        // Autoplay failed, which is expected on mobile
-        // The video will need user interaction to play
-        console.log('Autoplay prevented:', error)
-      }
-    }
-
-    // Try to play immediately (works on desktop)
-    attemptPlay()
-
-    // Also try to play on any user interaction
-    const handleUserInteraction = () => {
-      attemptPlay()
-      // Remove listeners after first interaction
-      document.removeEventListener('touchstart', handleUserInteraction)
-      document.removeEventListener('click', handleUserInteraction)
-    }
-
-    document.addEventListener('touchstart', handleUserInteraction, {
-      passive: true
-    })
-    document.addEventListener('click', handleUserInteraction)
-
-    return () => {
-      document.removeEventListener('touchstart', handleUserInteraction)
-      document.removeEventListener('click', handleUserInteraction)
-    }
-  }, [])
+  // Use the mobile video playback hook
+  useMobileVideoPlayback(videoRef)
 
   return (
     <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">

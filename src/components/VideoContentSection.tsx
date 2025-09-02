@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react'
 import React, { useRef, useEffect } from 'react'
+import { useMobileVideoPlayback } from '../hooks/useMobileVideoPlayback'
 
 interface VideoContentSectionProps {
   title1: string
@@ -29,6 +30,10 @@ const VideoContentSection: React.FC<VideoContentSectionProps> = ({
   const video1Ref = useRef<HTMLVideoElement>(null)
   const video2Ref = useRef<HTMLVideoElement>(null)
 
+  // Apply mobile video playback handling to both videos
+  useMobileVideoPlayback(video1Ref)
+  useMobileVideoPlayback(video2Ref)
+
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -41,8 +46,11 @@ const VideoContentSection: React.FC<VideoContentSectionProps> = ({
         const video = entry.target as HTMLVideoElement
 
         if (entry.isIntersecting) {
+          // Attempt to play video when it comes into view
+          // The useMobileVideoPlayback hook will handle mobile restrictions
           video.play().catch(() => {
             // Handle play() promise rejection silently
+            // On mobile, the hook will handle playback on user interaction
           })
         } else {
           video.pause()
@@ -99,12 +107,13 @@ const VideoContentSection: React.FC<VideoContentSectionProps> = ({
 
           {/* Right: Video */}
           <div className="relative">
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden ">
               <video
                 ref={video1Ref}
                 className="w-full h-full object-fill"
                 muted
                 loop={isLooped}
+                autoPlay
                 playsInline
                 preload="metadata"
               >
@@ -135,6 +144,7 @@ const VideoContentSection: React.FC<VideoContentSectionProps> = ({
               className="ml-14 w-full max-h-[520px] object-contain"
               muted
               loop={isLooped}
+              autoPlay
               playsInline
               preload="metadata"
             >
