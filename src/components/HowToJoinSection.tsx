@@ -38,7 +38,7 @@ const HowToJoinSection = forwardRef<HowToJoinSectionRef>((props, ref) => {
   }))
 
   return (
-    <section className="" id="how-to-join-section">
+    <section className="px-5 px-" id="how-to-join-section">
       {/* User selection section */}
 
       <div className="max-w-6xl mx-auto mb-5">
@@ -175,11 +175,6 @@ const HowToJoinSection = forwardRef<HowToJoinSectionRef>((props, ref) => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className=" py-20">
-        {/* Overlay for better text contrast */}
-        {/* <div className="absolute inset-0 bg-primary/80 z-10 "></div> */}
       </div>
 
       {/* MailerLite Modal */}

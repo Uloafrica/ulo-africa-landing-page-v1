@@ -110,7 +110,7 @@ const VideoContentSection: React.FC<VideoContentSectionProps> = ({
             <div className="relative overflow-hidden ">
               <video
                 ref={video1Ref}
-                className="w-full h-full object-fill"
+                className="md:w-full md:h-full max-h-[320px] md:max-h-[520px] ml-9 md:ml-0 object-contain  md:object-fill"
                 muted
                 loop={isLooped}
                 autoPlay
@@ -128,7 +128,7 @@ const VideoContentSection: React.FC<VideoContentSectionProps> = ({
       {/* Second section (centered) */}
       <section
         id={`${sectionId}-2`}
-        className="py-24 px-4 sm:px-6 lg:px-12"
+        className="py-12 md:py-24 px-4 sm:px-6 lg:px-12"
         style={{ display: video2 ? 'block' : 'none' }}
       >
         <div className="max-w-3xl mx-auto text-center mb-5">
@@ -141,7 +141,7 @@ const VideoContentSection: React.FC<VideoContentSectionProps> = ({
           <div className="relative overflow-hidden ">
             <video
               ref={video2Ref}
-              className="ml-14 w-full max-h-[520px] object-contain"
+              className="ml-7 md:ml-14 w-full max-h-[320px]  md:max-h-[520px] object-contain"
               muted
               loop={isLooped}
               autoPlay

@@ -21,8 +21,8 @@ const CTASection: React.FC = () => {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto ">
+    <section className="py-10 md:py-20  px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center space-x-5">
           <img
             src="/ucap-logo.png"
@@ -35,12 +35,12 @@ const CTASection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 my-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 my-3 md:my-16 items-center">
           <div className="">
             <img
               src="/icons/BADGE.png"
               alt="UCAP program logo"
-              className="h-full mb-3  "
+              className="h-full mb-3 -ml-5 md:ml-0 "
             />
           </div>
 

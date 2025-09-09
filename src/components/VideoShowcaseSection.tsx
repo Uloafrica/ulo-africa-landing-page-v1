@@ -111,7 +111,7 @@ const VideoShowcaseSection: React.FC<VideoShowcaseSectionProps> = ({
         </div>
         <div
           ref={containerRef}
-          className={`relative bg-gray-900 rounded-[50px] overflow-hidden aspect-video mx-auto ${
+          className={`relative bg-gray-900 rounded-3xl md:rounded-[50px] overflow-hidden aspect-video mx-auto ${
             isFullscreen ? 'fixed inset-0 z-50 rounded-none' : 'max-w-7xl'
           }`}
         >
